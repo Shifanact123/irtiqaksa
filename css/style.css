@@ -1,4 +1,4 @@
-/********** Template CSS **********/
+
 :root {
     --primary: #800080;
     --secondary: #5F656F;
@@ -720,4 +720,17 @@ h6,
 .nav-item .dropdown-menu .dropdown-item.active {
     background-color: purple;
     color: white;  /* Optional */
+}
+@media (max-width: 767px) {
+    .btn {
+        background-color: #800080 !important;
+        color: white;
+        border-color: #800080;
+        transition: background-color 0.3s ease;
+    }
+    
+    /* Hover effect for mobile */
+    .btn:hover {
+        background-color: #720e9e !important;
+    }
 }
