@@ -1,9 +1,22 @@
 
+
 :root {
     --primary: #800080;
     --secondary: #5F656F;
     --light: #F5F5F5;
     --dark: #02245B;
+}
+html,body{
+    height: 100%;
+    box-sizing: border-box;
+
+}
+body{
+    position: relative;
+    margin: 0;
+    min-height: 6.74rem;
+    box-sizing: inherit;
+   
 }
 
 .back-to-top {
@@ -230,6 +243,44 @@ h6,
 
 .page-header {
     background: linear-gradient(to right, rgba(2, 36, 91, 1) 0%, rgba(2, 36, 91, 0) 100%), url(../img/carousel-2.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.page-header1{
+    background: linear-gradient(to right, rgba(2, 36, 91, 1) 0%, rgba(2, 36, 91, 0) 100%), url(../img/constru-1.jpg) center center no-repeat;
+    background-size: cover;
+}
+.page-header-2{
+    background: linear-gradient(to right, rgba(2, 36, 91, 1) 0%, rgba(2, 36, 91, 0) 100%), url(../img/constrat-22.jpg) center center no-repeat;
+    background-size: cover;
+}
+.pagr-header-3 {
+    background: linear-gradient(to right, rgba(2, 36, 91, 1) 0%, rgba(2, 36, 91, 0) 100%), url(../img/civil\ work33.jpg) center center no-repeat;
+    background-size: cover;
+}
+.page-header-4{
+    background: linear-gradient(to right, rgba(2, 36, 91, 1) 0%, rgba(2, 36, 91, 0) 100%), url(../img/electric-44.jpg) center center no-repeat;
+    background-size: cover;
+}
+.page-header-5{
+    background: linear-gradient(to right, rgba(2, 36, 91, 1) 0%, rgba(2, 36, 91, 0) 100%), url(../img/fire-55.jpg) center center no-repeat;
+    background-size: cover;
+}
+.page-header-6{
+    background: linear-gradient(to right, rgba(2, 36, 91, 1) 0%, rgba(2, 36, 91, 0) 100%), url(../img/mechanical-66.jpg) center center no-repeat;
+    background-size: cover;
+}
+.page-header-11 {
+    background: linear-gradient(to right, rgba(2, 36, 91, 1) 0%, rgba(2, 36, 91, 0) 100%), url(../img/service\ hd.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.page-header-22{
+    background: linear-gradient(to right, rgba(2, 36, 91, 1) 0%, rgba(2, 36, 91, 0) 100%), url(../img/contact\ hd1.jpg) center center no-repeat;
+    background-size: cover;
+}
+.page-header-33 {
+    background: linear-gradient(to right, rgba(2, 36, 91, 1) 0%, rgba(2, 36, 91, 0) 100%), url(../img/about\ hd.jpg) center center no-repeat;
     background-size: cover;
 }
 
@@ -554,120 +605,10 @@ h6,
     transition: .5s;
 }
 
-
-/*** Team ***/
-.team-item .team-social {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: -100%;
-    display: flex;
-    align-items: center;
-    background: var(--primary);
-    transition: .5s;
-}
-
-.team-item:hover .team-social {
-    left: 0;
-}
-
-
-/*** Testimonial ***/
-.testimonial-carousel::before {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 0;
-    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
-    z-index: 1;
-}
-
-.testimonial-carousel::after {
-    position: absolute;
-    content: "";
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 0;
-    background: linear-gradient(to left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
-    z-index: 1;
-}
-
-@media (min-width: 768px) {
-    .testimonial-carousel::before,
-    .testimonial-carousel::after {
-        width: 200px;
-    }
-}
-
-@media (min-width: 992px) {
-    .testimonial-carousel::before,
-    .testimonial-carousel::after {
-        width: 300px;
-    }
-}
-
-.testimonial-carousel .owl-nav {
-    position: absolute;
-    width: 350px;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: space-between;
-    opacity: 0;
-    transition: .5s;
-    z-index: 1;
-}
-
-.testimonial-carousel:hover .owl-nav {
-    width: 300px;
-    opacity: 1;
-}
-
-.testimonial-carousel .owl-nav .owl-prev,
-.testimonial-carousel .owl-nav .owl-next {
-    position: relative;
-    color: var(--primary);
-    font-size: 45px;
-    transition: .5s;
-}
-
-.testimonial-carousel .owl-nav .owl-prev:hover,
-.testimonial-carousel .owl-nav .owl-next:hover {
-    color: var(--dark);
-}
-
-.testimonial-carousel .testimonial-img img {
-    width: 100px;
-    height: 100px;
-}
-
-.testimonial-carousel .testimonial-img .btn-square {
-    position: absolute;
-    bottom: -19px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.testimonial-carousel .owl-item .testimonial-text {
-    margin-bottom: 30px;
-    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
-    transform: scale(.8);
-    transition: .5s;
-}
-
-.testimonial-carousel .owl-item.center .testimonial-text {
-    transform: scale(1);
-}
-
-
 /*** Footer ***/
 .footer {
     color: #B0B9AE;
+   
 }
 
 .footer .btn.btn-link {
@@ -729,20 +670,17 @@ input:focus, textarea:focus {
     box-shadow: 0 0 5px rgba(128, 0, 128, 0.5); /* Optional: Adds a subtle shadow around the focused element */
 }
 
-.phone-number {
-    color: #72766e; /* Default color */
+/* Reducing the padding/margin for the footer */
+.footer {
+    padding-top: 20px; /* Adjust as needed */
+    padding-bottom: 20px; /* Adjust as needed */
 }
 
-@media only screen and (max-width: 768px) {
-    .phone-number {
-        color: #72766e !important; /* Change color to orange on mobile */
-    }
 
-    .call-now {
-        background-color: #800080; /* Ensure purple background on mobile */
-    }
 
-    .call-now:hover {
-        background-color: #720e9e; /* Dark purple on hover */
-    }
-}
+
+
+
+
+
+
