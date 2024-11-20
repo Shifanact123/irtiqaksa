@@ -721,16 +721,47 @@ h6,
     background-color: purple;
     color: white;  /* Optional */
 }
+/* Ensuring phone number stays purple (#452c63) on all devices */
+.phone-number, .phone-number span {
+    color: #452c63 !important;  /* Default color for phone number */
+}
+
+/* Specific mobile view override */
 @media (max-width: 767px) {
-    .btn {
-        background-color: #800080 !important;
-        color: white;
-        border-color: #800080;
-        transition: background-color 0.3s ease;
+    .phone-number, .phone-number span {
+        color: #452c63 !important;  /* Ensure color stays purple on mobile */
     }
-    
-    /* Hover effect for mobile */
-    .btn:hover {
-        background-color: #720e9e !important;
+}
+/* Ensure phone number color remains consistent */
+.phone-number {
+    color: #B0B9AE !important;  /* Prevent mobile browser from changing the color */
+}
+
+/* Media Query to ensure the color remains consistent on mobile */
+@media (max-width: 767px) {
+    .phone-number {
+        color: #B0B9AE !important;  /* Enforce the same color on mobile devices */
+    }
+}
+/* Ensure the phone number color stays consistent */
+.phone-number, .phone-number span {
+    color: #72766e !important;  /* Prevent mobile browser from changing the color */
+}
+
+/* Mobile-specific styles to ensure the color remains consistent */
+@media (max-width: 767px) {
+    .phone-number, .phone-number span {
+        color: #72766e !important;  /* Ensure color stays on mobile */
+    }
+}
+/* Ensure the phone number color stays consistent */
+.phone-number {
+    color: #800080 !important;  /* Enforce purple color for phone number */
+}
+
+/* Mobile-specific styles to ensure the color remains consistent */
+@media (max-width: 767px) {
+    .phone-number {
+        color: #800080 !important;  /* Keep the purple color on mobile */
     }
 }
