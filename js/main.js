@@ -18,12 +18,26 @@
 
     // Sticky Navbar
     $(window).scroll(function () {
+        // Get the scroll position from the top
         if ($(this).scrollTop() > 300) {
-            $('.sticky-top').addClass('shadow-sm').css('top', '0px');
+            // When scroll position is greater than 300px, add sticky behavior
+            $('.sticky-top').addClass('shadow-sm').css({
+                'position': 'fixed',
+                'top': '0px',
+                'width': '100%',
+                'z-index': '1020' // Ensure the navbar stays above other content
+            });
         } else {
-            $('.sticky-top').removeClass('shadow-sm').css('top', '-100px');
+            // When scroll position is less than 300px, remove sticky behavior
+            $('.sticky-top').removeClass('shadow-sm').css({
+                'position': 'relative',
+                'top': '0px',
+                'width': 'auto',  // Reset width to auto, so it behaves normally
+                'z-index': ''     // Remove z-index to prevent overlap
+            });
         }
     });
+    
     
     
     // Back to top button
