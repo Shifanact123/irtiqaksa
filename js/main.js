@@ -133,28 +133,6 @@
 })(jQuery);
 
 
-// Wait for the DOM to be fully loaded
-document.addEventListener('DOMContentLoaded', function () {
-    // Get the form and button elements
-    const sendButton = document.getElementById('sendButton');
-    
-    // Add an event listener for the button click
-    sendButton.addEventListener('click', sendEmail);
-
-    function sendEmail() {
-        // Get the values from the form fields
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const subject = document.getElementById('subject').value;
-        const message = document.getElementById('message').value;
-
-        // Construct the mailto link with encoded values
-        const mailtoLink = `mailto:info@yourdomain.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\nMessage: ' + message)}`;
-
-        // Open the user's default email client with pre-filled data
-        window.location.href = mailtoLink;
-    }
-});
 
 $(document).ready(function() {
     // When any dropdown item is clicked, add the 'active' class
@@ -186,3 +164,22 @@ document.addEventListener("DOMContentLoaded", function() {
         
     }, 1000);  // Show the logo for 1 second before starting the transition
 });
+
+
+$("#submit-form").submit((e)=>{
+    e.preventDefault()
+    $.ajax({
+        url:"https://script.google.com/macros/s/AKfycbyklPAz3fwuEzNJv677SrSCgPyrSAZY-i1rySB9qSUAXbGhIjBR4V6-Nj_M_3T1ZBVs/exec",
+        data:$("#submit-form").serialize(),
+        method:"post",
+        success:function (response){
+            alert("Form submitted successfully")
+            window.location.reload()
+            //window.location.href="https://google.com"
+        },
+        error:function (err){
+            alert("Something Error")
+
+        }
+    })
+})
